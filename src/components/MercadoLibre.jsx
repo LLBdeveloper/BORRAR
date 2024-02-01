@@ -12,13 +12,16 @@ function MercadoLibre() {
             setDigimons(json.content)
         })
     
-
     return (
         <>
+            <h1>DIGIMON LIST</h1>
             <div>
-            {digimons.map( digi => (
-                <h3>{digi.name}</h3> 
-            ))}
+                {digimons.map( digi => (
+                    <div key={digi.id} >
+                        <h3>#{digi.id} {digi.name}</h3>
+                        <img src={digi.image} alt={digi.name} />
+                    </div>
+                ))}
             </div>
         </>
     )
