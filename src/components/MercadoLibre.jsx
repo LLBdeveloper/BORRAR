@@ -18,6 +18,7 @@ function MercadoLibre() {
             <div>
                 {digimons.map( digi => (
                     <div key={digi.id} >
+
                         <h3>#{digi.id} {digi.name}</h3>
                         <img src={digi.image} alt={digi.name} />
                     </div>
